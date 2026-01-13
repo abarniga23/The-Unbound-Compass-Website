@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Unbound Compass</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="The Unbound Compass Logo" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations / Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-3 custom-btn-teal" href="destinations.html">Find Your Journey</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-header py-5 custom-bg-light-teal">
+            <div class="container text-center text-lg-start">
+                <h1 class="display-5 mb-4 custom-color-dark-blue">Let's Plan Your Next Adventure</h1>
+                <div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start align-items-center">
+                    <p class="lead me-lg-4 mb-2 mb-lg-0 custom-color-dark-blue"><i class="bi bi-envelope me-2"></i>unboundcompass@gmail.com</p>
+                    <p class="lead mb-0 custom-color-dark-blue"><i class="bi bi-phone me-2"></i>+1 (555) 345-3423</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-map py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="p-4 custom-form-box">
+                            <h2 class="mb-4 custom-color-dark-blue">Send Us a Message</h2>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailAddress" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subjectTopic" class="form-label">Subject/Topic</label>
+                                    <select class="form-select" id="subjectTopic" required>
+                                        <option value="">Select a topic</option>
+                                        <option>Booking Inquiry</option>
+                                        <option>Guide Question</option>
+                                        <option>Partnership</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="messageText" class="form-label">Message</label>
+                                    <textarea class="form-control" id="messageText" rows="4" placeholder="Type your message here..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary custom-btn-teal-outline w-100">Send Inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="p-4 custom-map-box">
+                            <h2 class="mb-4 custom-color-dark-blue">Our Basecamp</h2>
+                            <div class="map-placeholder">
+                                <img src="img/map-denver.png" alt="Map of 1841 Wazee Street, Denver, Colorado" class="img-fluid rounded-3">
+                            </div>
+                            <p class="mt-3 mb-0 custom-color-dark-blue"><i class="bi bi-geo-alt me-2"></i>1841 Wazee Street, Denver, Colorado 80202</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section py-5 custom-bg-light-teal" id="faq">
+            <div class="container">
+                <h2 class="text-center mb-5 custom-color-dark-blue">Frequently Asked Questions (FAQ)</h2>
+                <div class="accordion accordion-flush" id="faqAccordion">
+                    <div class="accordion-item custom-accordion-teal">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed custom-accordion-button custom-color-dark-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Do you offer solo travel packages?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! Many of our packages are designed with solo travelers in mind, providing opportunities for both independence and group activities. We can also customize itineraries to fit your individual preferences.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item custom-accordion-teal">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed custom-accordion-button custom-color-dark-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What is your booking process?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our booking process is simple: browse packages, select your dates, fill out a short traveler profile, and pay a deposit to confirm. A Navigator will be in touch shortly after!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item custom-accordion-teal">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed custom-accordion-button custom-color-dark-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What kind of gear do I need for my trip?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We provide a detailed gear list for every package. You can also view our comprehensive <a href="safety-checklist.html">Safety & Gear Checklist</a> resource page for general and activity-specific packing tips.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item custom-accordion-teal">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed custom-accordion-button custom-color-dark-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Can I customize an existing package?
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! Our specialty is bespoke travel. Please use the contact form above to discuss specific customizations with a travel specialist.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item custom-accordion-teal">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed custom-accordion-button custom-color-dark-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What are the payment options?
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We accept all major credit cards and bank transfers. Deposits are required at the time of booking, with the full balance due 60 days prior to departure.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-banner py-5 custom-bg-dark-teal text-white text-center">
+            <div class="container">
+                <h2 class="display-6 mb-4">Ready to explore the world on your terms?</h2>
+                <a href="destinations.html" class="btn btn-lg btn-light custom-btn-find-journey fw-bold">Find Your Package</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 bg-white border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <img src="img/logo-footer.png" alt="Logo" height="30" class="mb-3">
+                    <p class="small text-muted">Designing solo-ready adventures since 2025.</p>
+                    <p class="small mb-1"><i class="bi bi-envelope me-2"></i>unboundcompass@gmail.com</p>
+                    <p class="small"><i class="bi bi-phone me-2"></i>+1 (555) 345-3423</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="destinations.html" class="text-decoration-none text-muted">Destinations / Packages</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="safety-checklist.html" class="text-decoration-none text-muted">Safety & Gear Checklist</a></li>
+                        <li><a href="contact.html#faq" class="text-decoration-none text-muted">FAQ</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="text-muted me-2"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                    <h6>Subscribe</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your Email">
+                        <button class="btn btn-sm custom-btn-teal" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="small mb-0">&copy; 2025 The Unbound Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

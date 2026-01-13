@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations & Packages | The Unbound Compass</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="The Unbound Compass Logo" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations / Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-3 custom-btn-teal" href="destinations.html">Find Your Journey</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5 custom-color-dark-blue">Explore Our Expeditions</h1>
+
+            <div class="row">
+
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="card p-3 shadow-sm custom-sidebar-card">
+                        <h5 class="mb-3 custom-color-dark-blue">Filter Expeditions</h5>
+                        
+                        <form id="filter-form">
+                            <div class="form-check form-switch mb-4">
+                                <input class="form-check-input custom-switch-input" type="checkbox" id="soloTravelerCheck" value="Solo">
+                                <label class="form-check-label fw-bold" for="soloTravelerCheck">
+                                    <i class="bi bi-person me-1"></i> Show Solo Deals Only
+                                </label>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-3">Activity Type</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Trekking" id="checkTrekking">
+                                    <label class="form-check-label" for="checkTrekking">Trekking & Hiking</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Diving" id="checkDiving">
+                                    <label class="form-check-label" for="checkDiving">Diving & Snorkeling</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Safari" id="checkSafari">
+                                    <label class="form-check-label" for="checkSafari">Safari & Wildlife</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Kayaking" id="checkKayaking">
+                                    <label class="form-check-label" for="checkKayaking">Kayaking & Canoeing</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Photography" id="checkPhotography">
+                                    <label class="form-check-label" for="checkPhotography">Photography</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-3">Duration</h6>
+                                <select class="form-select" aria-label="Duration filter">
+                                    <option selected>Any Duration</option>
+                                    <option value="1">1-5 Days</option>
+                                    <option value="2">6-10 Days</option>
+                                    <option value="3">11+ Days</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn custom-btn-teal w-100" onclick="updateDestinationCards()">Apply Filters</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        
+                        <div class="col-md-6 col-xl-4 destination-card" data-solo="true" data-activity="Trekking">
+                            <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                                <img src="img/dest-package-1.png" class="card-img-top" alt="Himalayan Basecamp Trek">
+                                <div class="card-body">
+                                    <span class="badge custom-badge-teal mb-2">Trekking</span>
+                                    <h5 class="card-title">Himalayan Basecamp Trek</h5>
+                                    <p class="card-text small text-muted">14 Days | Solo-Friendly</p>
+                                    <p class="card-text">Challenge yourself with an immersive trek through the remote Annapurna region.</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 custom-color-dark-blue">$2,800</span>
+                                    <a href="#" class="btn btn-sm custom-btn-teal">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-4 destination-card" data-solo="true" data-activity="Diving">
+                            <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                                <img src="img/dest-package-2.png" class="card-img-top" alt="Peruvian Coast Dive">
+                                <div class="card-body">
+                                    <span class="badge custom-badge-teal mb-2">Diving & Snorkeling</span>
+                                    <h5 class="card-title">Peruvian Coastal Immersion</h5>
+                                    <p class="card-text small text-muted">7 Days | Local Immersion</p>
+                                    <p class="card-text">Explore the hidden marine life and ancient fishing villages of the Pacific coast.</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 custom-color-dark-blue">$1,550</span>
+                                    <a href="#" class="btn btn-sm custom-btn-teal">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-xl-4 destination-card" data-solo="false" data-activity="Safari">
+                            <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                                <img src="img/dest-package-3.png" class="card-img-top" alt="African Wildlife Safari">
+                                <div class="card-body">
+                                    <span class="badge custom-badge-teal mb-2">Safari & Wildlife</span>
+                                    <h5 class="card-title">East African Wildlife Safari</h5>
+                                    <p class="card-text small text-muted">10 Days | Small Group</p>
+                                    <p class="card-text">Experience the great migration and cultural encounters with local guides.</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 custom-color-dark-blue">$4,200</span>
+                                    <a href="#" class="btn btn-sm custom-btn-teal">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-4 destination-card" data-solo="true" data-activity="Kayaking">
+                            <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                                <img src="img/dest-package-4.png" class="card-img-top" alt="Patagonian Kayaking">
+                                <div class="card-body">
+                                    <span class="badge custom-badge-teal mb-2">Kayaking & Canoeing</span>
+                                    <h5 class="card-title">Patagonian Glacier Kayak</h5>
+                                    <p class="card-text small text-muted">5 Days | Solo-Friendly</p>
+                                    <p class="card-text">Paddle through icy waters, exploring ancient fjords and massive glaciers in Chile.</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 custom-color-dark-blue">$1,990</span>
+                                    <a href="#" class="btn btn-sm custom-btn-teal">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-4 destination-card" data-solo="false" data-activity="Photography">
+                            <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                                <img src="img/dest-package-5.png" class="card-img-top" alt="Iceland Northern Lights">
+                                <div class="card-body">
+                                    <span class="badge custom-badge-teal mb-2">Photography</span>
+                                    <h5 class="card-title">Iceland Northern Lights Quest</h5>
+                                    <p class="card-text small text-muted">7 Days | Small Group</p>
+                                    <p class="card-text">Capture the aurora borealis while exploring the stunning volcanic landscapes of Iceland.</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 custom-color-dark-blue">$3,150</span>
+                                    <a href="#" class="btn btn-sm custom-btn-teal">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link custom-page-link-active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-banner py-5 mt-5 custom-bg-dark-teal text-white text-center">
+            <div class="container">
+                <h2 class="display-6 mb-4">Ready to explore the world on your terms?</h2>
+                <a href="destinations.html" class="btn btn-lg btn-light custom-btn-find-journey fw-bold">Find Your Package</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 bg-white border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <img src="img/logo-footer.png" alt="Logo" height="30" class="mb-3">
+                    <p class="small text-muted">Designing solo-ready adventures since 2025.</p>
+                    <p class="small mb-1"><i class="bi bi-envelope me-2"></i>unboundcompass@gmail.com</p>
+                    <p class="small"><i class="bi bi-phone me-2"></i>+1 (555) 345-3423</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="destinations.html" class="text-decoration-none text-muted">Destinations / Packages</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="safety-checklist.html" class="text-decoration-none text-muted">Safety & Gear Checklist</a></li>
+                        <li><a href="contact.html#faq" class="text-decoration-none text-muted">FAQ</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="text-muted me-2"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                    <h6>Subscribe</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your Email">
+                        <button class="btn btn-sm custom-btn-teal" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="small mb-0">&copy; 2025 The Unbound Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

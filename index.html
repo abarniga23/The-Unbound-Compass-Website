@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | The Unbound Compass</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="The Unbound Compass Logo" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations / Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-3 custom-btn-teal" href="destinations.html">Find Your Journey</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-split custom-bg-light-teal">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 hero-image-left">
+                        </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center p-5">
+                        <div class="text-center text-lg-start">
+                            <h1 class="display-3 fw-bold custom-color-dark-blue mb-4">Find Your True North</h1>
+                            <p class="lead mb-4" style="max-width: 450px;">
+                                Embark on bespoke journeys that illuminate your path and ignite your passion. Start searching for your next great adventure below.
+                            </p>
+                            <form class="d-flex mx-auto mx-lg-0" style="max-width: 450px;">
+                                <input class="form-control me-2" type="search" placeholder="Search destinations, passions, or themes..." aria-label="Search">
+                                <button class="btn custom-btn-teal" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured-destinations py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center mb-5 custom-color-dark-blue">Solo Ready Adventures</h2>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                            <img src="img/solo-trek.png" class="card-img-top" alt="Himalayan Solo Trek">
+                            <div class="card-body custom-bg-light-teal">
+                                <h5 class="card-title text-center">Himalayan Solo Trek</h5>
+                            </div>
+                            <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 custom-color-dark-blue">$2,500</span>
+                                <a href="destinations.html#trek" class="btn btn-sm custom-btn-teal">View Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                            <img src="img/andean-trek.png" class="card-img-top" alt="Andean Mountain Trek">
+                            <div class="card-body custom-bg-light-teal">
+                                <h5 class="card-title text-center">Andean Mountain Trek for One</h5>
+                            </div>
+                            <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 custom-color-dark-blue">$1,850</span>
+                                <a href="destinations.html#andean" class="btn btn-sm custom-btn-teal">View Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 custom-card-shadow">
+                            <img src="img/patagonia-kayak.png" class="card-img-top" alt="Patagonia Wilderness Kayak">
+                            <div class="card-body custom-bg-light-teal">
+                                <h5 class="card-title text-center">Patagonia Wilderness Kayak</h5>
+                            </div>
+                            <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 custom-color-dark-blue">$1,800</span>
+                                <a href="destinations.html#kayak" class="btn btn-sm custom-btn-teal">View Deal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="destinations.html?filter=solo" class="btn btn-lg custom-btn-teal-outline">View All Solo Deals</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="activity-grid py-5 custom-bg-light-teal">
+            <div class="container">
+                <h2 class="text-center mb-5 custom-color-dark-blue">Adventure Awaits: Explore by Passion</h2>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=hiking" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-map fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Hiking</h5>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=diving" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-mask fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Scuba/Dive</h5>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=camping" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-backpack-fill fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Camping</h5>
+                        </a>
+                    </div>
+                    
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=expedition" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-rocket-takeoff fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Expeditions</h5>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=trekking" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-signpost-2-fill fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Trekking</h5>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                        <a href="destinations.html?activity=sailing" class="card custom-activity-card text-center p-4 h-100 shadow-sm text-decoration-none">
+                            <i class="bi bi-compass fs-1 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="card-title custom-color-dark-blue">Sailing</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center mb-5 custom-color-dark-blue">Travel with Confidence</h2>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-4 custom-bg-light-teal rounded-3 text-center h-100">
+                            <i class="bi bi-shield-lock-fill fs-3 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="custom-color-dark-blue">Safety First</h5>
+                            <p class="small mb-2">Every journey adheres to rigorous safety protocols. We empower solo travelers with detailed prep and support.</p>
+                            <a href="safety-checklist.html" class="small fw-bold custom-color-dark-blue"><u>Safety & Gear Checklist</u></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-4 custom-bg-light-teal rounded-3 text-center h-100">
+                            <i class="bi bi-person-check-fill fs-3 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="custom-color-dark-blue">Local Expertise</h5>
+                            <p class="small mb-2">Our navigators are local experts who provide deep cultural immersion and reliable on-the-ground support.</p>
+                            <a href="about.html#team" class="small fw-bold custom-color-dark-blue"><u>Meet Our Guides</u></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-4 custom-bg-light-teal rounded-3 text-center h-100">
+                            <i class="bi bi-calendar-check-fill fs-3 mb-2 custom-color-dark-blue"></i>
+                            <h5 class="custom-color-dark-blue">Flexible Booking</h5>
+                            <p class="small mb-2">Life happens. Our flexible booking and cancellation policies are designed to accommodate the solo traveler's needs.</p>
+                            <a href="contact.html#faq" class="small fw-bold custom-color-dark-blue"><u>View Policies</u></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner py-5 custom-bg-dark-teal text-white text-center">
+            <div class="container">
+                <h2 class="display-6 mb-4">Ready to explore the world on your terms?</h2>
+                <a href="destinations.html" class="btn btn-lg btn-light custom-btn-find-journey fw-bold">Find Your Package</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 bg-white border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <img src="img/logo-footer.png" alt="Logo" height="30" class="mb-3">
+                    <p class="small text-muted">Designing solo-ready adventures since 2025.</p>
+                    <p class="small mb-1"><i class="bi bi-envelope me-2"></i>unboundcompass@gmail.com</p>
+                    <p class="small"><i class="bi bi-phone me-2"></i>+1 (555) 345-3423</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="destinations.html" class="text-decoration-none text-muted">Destinations / Packages</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="safety-checklist.html" class="text-decoration-none text-muted">Safety & Gear Checklist</a></li>
+                        <li><a href="contact.html#faq" class="text-decoration-none text-muted">FAQ</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="text-muted me-2"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-youtube fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                    <h6>Subscribe</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your Email">
+                        <button class="btn btn-sm custom-btn-teal" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="small mb-0">&copy; 2025 The Unbound Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+
+/* 1. ROOT COLORS & TYPOGRAPHY */
+
+
+:root {
+    /* Main Brand Colors  */
+    --color-primary-dark: #018698;       /* Dark Blue (Headlines, Text) */
+    --color-accent-teal: #0085B2;        /* Mid/Dark Teal (Buttons, Active elements) */
+    --color-background-light: #ABDEE5;   /* Light Teal/Blue (Section Backgrounds) */
+    --color-cta-dark: #51CBE0;           /* Darker Teal (Final CTA Banner) */
+    --color-text-body: #000000;          /* Dark Gray (Standard Body Text) */
+
+    /* Typography */
+    --font-heading: 'Georgia', serif; 
+    --font-body: 'Arial', sans-serif;
+    
+    /* Spacing */
+    --border-radius-lg: 1rem;
+    --border-radius-sm: 0.5rem;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+}
+
+
+/* 2. GLOBAL UTILITIES & BUTTONS */
+
+
+/* Backgrounds and Colors */
+.custom-bg-light-teal {
+    background-color: var(--color-background-light) !important;
+}
+
+.custom-bg-dark-teal {
+    background-color: var(--color-cta-dark) !important;
+}
+
+.custom-color-dark-blue {
+    color: var(--color-primary-dark) !important;
+}
+
+/* NEW UTILITY: For Principles Section Visibility */
+.custom-color-white {
+    color: white !important;
+}
+
+/* Text Shadow for light backgrounds */
+.custom-text-shadow-light {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Primary Button (Filled Teal) */
+.custom-btn-teal {
+    background-color: var(--color-accent-teal) !important;
+    color: white !important;
+    border: 1px solid var(--color-accent-teal) !important;
+    font-weight: bold;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.custom-btn-teal:hover {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+}
+
+/* Outline Button */
+.custom-btn-teal-outline {
+    color: var(--color-accent-teal) !important;
+    border: 2px solid var(--color-accent-teal) !important;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.custom-btn-teal-outline:hover {
+    background-color: var(--color-accent-teal) !important;
+    color: white !important;
+}
+
+/* Destination Badges */
+.custom-badge-teal {
+    background-color: var(--color-accent-teal) !important;
+    color: white !important;
+    padding: 0.4em 0.7em;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: var(--border-radius-sm);
+}
+
+
+/* 3. HEADER & NAVIGATION */
+
+
+.navbar-brand img {
+    height: 60px; /* Header logo size */
+}
+
+/* Footer logo size */
+.footer img {
+    height: 60px !important; 
+}
+
+/* Active Link Line (Visual refinement for the current page) */
+.navbar .nav-link.active {
+    color: var(--color-accent-teal) !important;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-accent-teal); /* Underline effect for active link */
+    padding-bottom: 5px; /* Creates space between text and the line */
+}
+
+/* Footer Links */
+.footer a:hover {
+    color: var(--color-accent-teal) !important;
+}
+
+
+/* 4. LAYOUT & SECTION STYLING (General) */
+
+
+/* --- Home Page Split Hero  --- */
+.hero-split .hero-image-left {
+    min-height: 450px; /* Base height for desktop image column */
+    background-image: url('../img/home-hero-split.png'); /* ⬅️ CRITICAL: THIS LINE ADDS THE IMAGE */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* General Hero Banners (used for About Us) */
+.hero-home, .hero-about-us {
+    height: 500px; /* Desktop Height */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero-home::before, .hero-about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for text readability */
+}
+.custom-text-shadow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure hero heading text is white for max visibility over dark image */
+.hero-about-us h1 {
+    color: white !important;
+}
+
+/* --- Home Page Split Hero  --- */
+.hero-split .hero-image-left {
+    min-height: 450px; /* Base height for desktop image column */
+    background-image: url('../img/home-hero-split.jpg'); 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* --- About Us Philosophy Background (NEW IMAGE BACKGROUND) --- */
+.philosophy-bg-image {
+    /* Replace solid color with image */
+    background-image: url('../img/philosophy-bg.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Optional: Creates parallax effect */
+    position: relative;
+}
+/* Ensure text containers have a semi-transparent background for readability */
+.philosophy-bg-image .custom-bg-text-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white box behind text */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* --- About Us Philosophy Quote  --- */
+.philosophy-section .blockquote p {
+    /* Ensures the quote text uses the dark brand color */
+    color: var(--color-primary-dark) !important;
+    /* Optional: Match font style of the design */
+    font-size: 1.25rem; 
+}
+.philosophy-section .blockquote-footer {
+    /* Ensures the footer/author is centered */
+    text-align: center !important; 
+    color: var(--color-text-body);
+}
+
+
+/* --- About Us Principles Cards  --- */
+.principles-section .custom-card-principle {
+    /* Style to match the image_a206d7.png dark blue cards */
+    background-color: var(--color-primary-dark) !important;
+    border: 1px solid var(--color-accent-teal); /* Add border for definition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 5. HOME PAGE & DESTINATIONS PAGE FIXES */
+
+
+/* --- Solo Ready Adventures Cards & Destination Cards --- */
+.custom-card-shadow {
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+.custom-card-shadow:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+/* Ensures card image is rectangular and correctly sized */
+.custom-card-shadow .card-img-top {
+    height: 200px; /* Specific height for visual consistency */
+    object-fit: cover; /* Ensures image fills space without distortion */
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0 !important; 
+}
+.custom-card-shadow .card-body {
+    padding: 1rem 1rem; 
+}
+.custom-card-shadow .card-footer {
+    /* Ensures price (left) and button (right) alignment */
+    padding: 0.75rem 1rem !important; 
+}
+
+
+/* --- Activity Cards (Explore by Passion) --- */
+.custom-activity-card {
+    /* Style to match the rounded square, teal border */
+    border: 2px solid var(--color-accent-teal);
+    border-radius: 1rem;
+    transition: background-color 0.2s;
+    background-color: white !important; 
+    
+}
+.custom-activity-card:hover {
+    background-color: var(--color-background-light) !important; 
+}
+
+/* --- Trust Section Cards (Safety First, Local Expertise) --- */
+.trust-section .rounded-3 {
+    border: 2px solid var(--color-accent-teal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 6. TEAM SECTION FIXES (ABOUT US) */
+
+
+/* Control photo size on desktop */
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%; /* Makes it circular */
+    /* Increased bottom margin to separate photo from text */
+    margin-bottom: 1.5rem !important; 
+}
+
+/* Ensure map image fills the height of the stretched container */
+.custom-map-box img {
+    width: 80%;
+    height: 76%;
+    object-fit: cover; /* This controls how the image scales to fill the space */
+}
+
+/* Tighter Vertical Spacing and Quote Control */
+.team-card h5.fw-bold {
+    /* Added margin below the name */
+    margin-bottom: 0.3rem !important; 
+}
+.team-card p.team-title {
+    /* Added margin below the title to separate it from the quote */
+    margin-bottom: 0.8rem !important; 
+    line-height: 1.2;
+}
+.team-card p.team-quote {
+    /* Ensures the quote is readable and centered */
+    max-width: 280px; 
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+}
+
+.team-section .team-grid-container {
+    /* Constrain the max width of the entire grid to center it better on massive screens */
+    max-width: 1200px;
+}
+
+
+/* 7. CONTACT & FORM STYLING */
+
+
+/* Ensures the map and form boxes are visually aligned on desktop */
+@media (min-width: 992px) {
+    .contact-form-map .row {
+        display: flex;
+        align-items: stretch; /* Stretches columns to match the tallest one */
+    }
+}
+
+.custom-form-box, .custom-map-box {
+    background-color: white; 
+    border-radius: var(--border-radius-lg);
+    border: 2px solid var(--color-accent-teal);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.custom-map-box img {
+    border-radius: var(--border-radius-sm);
+}
+
+/* Ensure form inputs adopt the branded look when focused */
+.form-control:focus {
+    border-color: var(--color-accent-teal);
+    box-shadow: 0 0 0 0.25rem rgba(13, 182, 255, 0.25);
+}
+
+
+/* 8. CHECKLIST (SAFETY PAGE) STYLING */
+
+
+.custom-accordion-gear {
+    background-color: white !important;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.custom-accordion-button {
+    color: var(--color-primary-dark) !important;
+    font-weight: bold;
+}
+.custom-accordion-button:not(.collapsed) {
+    color: white !important;
+    background-color: var(--color-accent-teal) !important;
+    box-shadow: none;
+}
+/* Remove default Bootstrap focus ring */
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+
+/* 9. RESPONSIVE ADJUSTMENTS (Mobile View) */
+
+
+@media (min-width: 992px) {
+    /* Larger images on desktop screens */
+    .team-photo-placeholder {
+        width: 180px;
+        height: 180px;
+        /* Ensure the border is still applied if it was intended to be here */
+        border: 4px solid var(--color-accent-teal); 
+    }
+}
+
+@media (max-width: 991.98px) {
+    /* Home Page: Reduce image height and stack */
+    .hero-split .hero-image-left {
+        min-height: 250px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .display-1 { font-size: 3rem !important; }
+    .display-4 { font-size: 2rem !important; }
+    .display-5 { font-size: 1.8rem !important; }
+
+    .hero-home, .hero-about-us {
+        height: 350px;
+    }
+
+    /* Ensure mobile team photos are a smaller, intended size */
+    .team-photo-placeholder {
+        width: 80px;
+        height: 80px;
+        /* Ensure the border is still applied if it was intended to be here */
+        border: 4px solid var(--color-accent-teal);
+    }
+}
